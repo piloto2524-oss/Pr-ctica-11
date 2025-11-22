@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int resultado;           // Variable global
+void multiplicar();      // Prototipo de la función
+
+int main() {
+    multiplicar();        // Llamado de la función multiplicar
+    printf("%i\n", resultado);
+    return 0;
+}
+
+void multiplicar() {      // Función multiplicar
+    resultado = 5 * 4;    // Se asigna el resultado en la variable global
+}
