@@ -1,0 +1,30 @@
+//################ funcEstatica.c ################
+#include <stdio.h>
+
+// Prototipos
+int suma(int, int);
+static int resta(int, int);
+int producto(int, int);
+static int cociente(int, int);
+
+//---------------- Definiciones ----------------//
+
+// Función con enlace externo (visible en otros archivos)
+int suma(int a, int b) {
+    return a + b;
+}
+
+// Función con enlace interno (solo visible dentro de este archivo)
+static int resta(int a, int b) {
+    return a - b;
+}
+
+// Función pública (visible en otros módulos)
+int producto(int a, int b) {
+    return a * b;
+}
+
+// Función privada (solo para este archivo)
+static int cociente(int a, int b) {
+    return a / b;  // Se asume b ≠ 0
+}
