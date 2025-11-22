@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+void incremento();
+
+/* La variable enteraGlobal es visible para todas las funciones */
+int enteraGlobal;
+
+int main() {
+    int cont;          // Variable local a main
+    enteraGlobal = 0;  // Inicialización de la variable global
+
+    for (cont = 0; cont < 5; cont++) {
+        incremento();  // Llamado de función
+    }
+
+    return 0;          // Buenas prácticas
+}
+
+void incremento() {
+    int enteraLocal = 5;      // Variable local a incremento
+    enteraGlobal += 2;        // Modifica la variable global
+
+    printf("global(%i) + local(%i) = %d\n",
+           enteraGlobal,
+           enteraLocal,
+           enteraGlobal + enteraLocal);
+}
