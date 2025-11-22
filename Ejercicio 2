@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+void sumar(); // Prototipo de la función
+
+int main() {
+    sumar();   // Llamado a la función sumar
+    return 0;  // Buenas prácticas
+}
+
+void sumar() { // Función sumar
+    int z, x = 5, y = 10;  // Variables locales
+    z = x + y;
+    printf("%i\n", z);
+}
