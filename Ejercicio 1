@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <string.h>
+
+// Prototipo de la función
+void imprimir(char []);
+
+// Función principal
+int main() {
+    char nombre[] = "Facultad de Ingeniería";
+    imprimir(nombre);
+    return 0;  // Buenas prácticas
+}
+
+// Implementación de la función
+void imprimir(char s[]) {
+    int tam;
+
+    for (tam = strlen(s) - 1; tam >= 0; tam--)
+        printf("%c", s[tam]);
+
+    printf("\n");
+}
